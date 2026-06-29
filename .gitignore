@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.bag
+*.db3
+devel/
+build/
+install/
+log/
+.catkin_tools/
+.ros/
+.env
+.env.*
+.DS_Store
+Thumbs.db
+
