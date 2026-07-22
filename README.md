@@ -48,7 +48,7 @@ Git author가 이 계정 소유자와 일치하는 것으로 확인된 커밋만
 
 ### 1. 주차 제어와 상태 머신
 
-- [`a5c79ac`](https://github.com/choiYhunn/2025_HEVEN_Hackathon6/commit/a5c79acdb57625928c2b94e1f68c199fe08fbe47): `brain_final.py` 추가
+- [`a5c79ac`](https://github.com/choiYhunn/skku-autonomous-driving-hackathon-2025/commit/a5c79acdb57625928c2b94e1f68c199fe08fbe47): `brain_final.py` 추가
 - 전면 주차와 평행 주차를 단계별 FSM으로 구성
 - 위치·yaw 오차를 이용한 보정 동작과 최대 반복 횟수 적용
 - 주차 경로에서 pure pursuit를 사용하고 정지·대기·후진 단계를 명시적으로 분리
@@ -56,7 +56,7 @@ Git author가 이 계정 소유자와 일치하는 것으로 확인된 커밋만
 
 ### 2. 경로 생성·추종과 디버그 도구
 
-- [`c2c9fb7`](https://github.com/choiYhunn/2025_HEVEN_Hackathon6/commit/c2c9fb76da8c2955963839435fbe0bbbbacc222e): `fsds_final.py` 추가
+- [`c2c9fb7`](https://github.com/choiYhunn/skku-autonomous-driving-hackathon-2025/commit/c2c9fb76da8c2955963839435fbe0bbbbacc222e): `fsds_final.py` 추가
 - cone boundary에서 중심 경로를 구성하고 선택적으로 racing line을 최적화
 - 곡률과 현재 속도를 사용해 look-ahead와 목표 속도를 조정
 - pure pursuit 기반 조향과 throttle/brake 명령 생성
@@ -64,7 +64,7 @@ Git author가 이 계정 소유자와 일치하는 것으로 확인된 커밋만
 
 ### 3. 저장소 정리
 
-- [`d284aac`](https://github.com/choiYhunn/2025_HEVEN_Hackathon6/commit/d284aac3d8d3b03878a3adc9ec3e62cc523bb6eb): `.gitignore` 추가 및 Python cache 제거
+- [`d284aac`](https://github.com/choiYhunn/skku-autonomous-driving-hackathon-2025/commit/d284aac3d8d3b03878a3adc9ec3e62cc523bb6eb): `.gitignore` 추가 및 Python cache 제거
 
 ## 해결한 기술 문제와 구현 방법
 
