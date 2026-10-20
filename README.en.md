@@ -90,7 +90,7 @@ The contribution scope is based on commits whose Git author matches my account.
 
 - [`d284aac`](https://github.com/choiYhunn/skku-autonomous-driving-hackathon-2025/commit/d284aac3d8d3b03878a3adc9ec3e62cc523bb6eb): added `.gitignore` and removed Python caches
 
-These commits establish work on the integration files. They do not imply sole authorship of all baseline and team components inside those files.
+These commits establish work on the integration files. They do not imply sole authorship of all baseline and team components inside those files. Both integration files were committed on 2026-04-27, after the November 2025 event, so Git history alone does not prove they are identical to the code run on competition day.
 
 ## 6. Problems and Solutions
 
@@ -131,6 +131,18 @@ The Formula/FSDS controller uses:
 ```bash
 roslaunch formula control.launch
 ```
+
+### Running the personal integration files
+
+The launch files above start the competition baseline nodes `Simulation/scripts/brain.py` and `Formula/formula/src/control.py`. The integration files at the repository root are not wired into any launch file; to use them, copy them over those names.
+
+```bash
+cp brain_final.py Simulation/scripts/brain.py        # imports database.py, parameter_list.py, debug.py from that folder
+cp fsds_final.py Formula/formula/src/control.py       # extra dependency: scipy
+chmod +x Simulation/scripts/brain.py Formula/formula/src/control.py
+```
+
+The 2026-10-20 check confirmed only that both files compile (`python3 -m py_compile`); running them under ROS was not re-verified.
 
 ## 8. Repository Structure
 
