@@ -90,7 +90,7 @@ Git author가 제 계정과 일치하는 커밋을 기준으로 범위를 확인
 
 - [`d284aac`](https://github.com/choiYhunn/skku-autonomous-driving-hackathon-2025/commit/d284aac3d8d3b03878a3adc9ec3e62cc523bb6eb): `.gitignore` 추가 및 Python cache 제거
 
-위 커밋은 해당 통합 파일의 작성·수정 근거이며, 파일 안의 기반 구조와 팀 구성 요소까지 모두 단독 작성했다는 의미는 아닙니다.
+위 커밋은 해당 통합 파일의 작성·수정 근거이며, 파일 안의 기반 구조와 팀 구성 요소까지 모두 단독 작성했다는 의미는 아닙니다. 두 통합 파일의 커밋 날짜(2026-04-27)는 대회(2025-11) 이후 저장소에 올린 시점이므로, 대회 당일 실행본과 완전히 같은지는 Git 기록만으로 증명되지 않습니다.
 
 ## 6. 주요 문제와 해결
 
@@ -131,6 +131,18 @@ Formula/FSDS 제어 노드는 다음 launch 구성을 사용합니다.
 ```bash
 roslaunch formula control.launch
 ```
+
+### 개인 통합본으로 실행하려면
+
+위 launch 파일은 대회 기본 노드인 `Simulation/scripts/brain.py`와 `Formula/formula/src/control.py`를 실행합니다. 루트의 개인 통합본은 launch 파일에 연결되어 있지 않으므로, 쓰려면 같은 이름으로 교체해야 합니다.
+
+```bash
+cp brain_final.py Simulation/scripts/brain.py        # database.py · parameter_list.py · debug.py를 같은 폴더에서 import
+cp fsds_final.py Formula/formula/src/control.py       # 추가 의존성: scipy
+chmod +x Simulation/scripts/brain.py Formula/formula/src/control.py
+```
+
+2026-10-20 점검에서는 두 파일의 Python 문법 컴파일(`python3 -m py_compile`)만 확인했고, ROS 환경에서의 실행은 재검증하지 않았습니다.
 
 ## 8. 저장소 구조
 
